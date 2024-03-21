@@ -1,6 +1,16 @@
 package langDetect
 
-import "fmt"
+import (
+	"bytes"
+	"context"
+	"encoding/json"
+	"io"
+	"io/ioutil"
+	"net/http"
+	"net/url"
+	"time"
+	"fmt"
+)
 
 // APIError is an error returned from the API
 type APIError struct {
